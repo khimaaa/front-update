@@ -1,0 +1,20 @@
+.khire {
+    width: 40%;
+    margin: 0 auto; /* Centre horizontalement */
+    background-color: rgb(57, 183, 116);
+    text-align: center; /* Facultatif pour centrer le texte à l'intérieur */
+  
+  }
+  
+  /* Appliquer à la balise h1 */
+.siham{
+    font-size: 2rem; /* Augmente la taille de la police */
+    color: #070707;     /* Couleur du texte */
+    text-align: center; /* Centre horizontalement le texte */
+    margin: 0;
+    position: absolute; /* Permet le centrage vertical avec transform */
+    top: 36%;
+   
+    margin-left: 10%;
+    font-family: Arial, sans-serif; /* Choix de police */
+}

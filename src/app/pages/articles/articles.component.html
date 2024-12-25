@@ -1,0 +1,45 @@
+
+  <!-- Article List -->
+ 
+	<!-- Add Article Form -->
+	<div class="mt-4">
+	  <h3>Ajouter un nouvel article</h3>
+	  <div class="form-group">
+		<input type="text" class="form-control mb-2" placeholder="Titre de l'article"  [(ngModel)]="newArticle.title">
+		<textarea class="form-control mb-2" rows="3" placeholder="Contenu de l'article" [(ngModel)]="newArticle.content"></textarea>
+		<button class="btn btn-success" (click)="addArticle()">Ajouter l'article</button>
+	  </div>
+	</div>
+
+
+
+
+
+  <div class="mt-4">
+	<h3>Liste des Articles</h3>
+  
+	<!-- Affiche un message si aucun article n'est disponible -->
+	<div *ngIf="articles.length === 0">
+	  <p>Aucun article disponible pour le moment.</p>
+	</div>
+  
+	<!-- Affiche les articles récupérés -->
+	<ul class="list-group" *ngIf="articles.length > 0">
+	  <li class="list-group-item" *ngFor="let article of articles">
+		<h5>{{ article.title }}</h5>
+		<p>{{ article.content }}</p>
+		<button (click)="sendEmails(article.id)">Envoyer des emails</button>
+	  </li>
+	</ul>
+	
+  </div>
+  
+
+
+
+<div *ngFor="let article of articles">
+	<h2>{{ article.title }}</h2>
+	<p>{{ article.content }}</p>
+	<button (click)="sendEmails(article.id)">Envoyer des emails</button>
+  </div>
+  
